@@ -3,7 +3,10 @@ const app = express();
 const port = 8080;
 
 // use express router
-app.use('/', require('./routes'))
+app.use('/', require('./routes'));
+
+app.set('view engine', 'ejs');
+app.set('view engine', './views');
 
 
 app.listen(port, function (err) {
